@@ -13,7 +13,7 @@ const Weather = ({data}) => {
           alt='/'
           width={100}
           height={100}
-          className='sm:w-full sm:h-screen'/>
+          className=''/>
           <p className='text-2xl sm:text-3xl'>{data.weather[0].main}</p>
         </div>
         <p className='text-6xl sm:text-8xl lg:text-9xl'>{data.main.temp.toFixed(0)}&#176;C</p>
