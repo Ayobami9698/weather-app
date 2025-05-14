@@ -53,17 +53,17 @@ if (loading) {
       priority
       />
 
-      <div className="relative flex justify-between items-center max-w-[500px] w-full m-auto pt-4 text-white z-10">
-        <form onSubmit={fetchWeather} className="flex justify-between items-center w-full m-auto p-3 bg-transparent border border-gray-300text-white rounded-2xl">
+      <div className="relative flex justify-between items-center max-w-[500px] w-full m-auto pt-4 text-white z-10 sm:px-6 mt-8">
+        <form onSubmit={fetchWeather} className="flex justify-between items-center w-full m-auto p-3 bg-transparent border border-gray-300 text-white rounded-2xl  sm:flex-row sm:items-center">
           <div>
             <input
             onChange={(e)=> setCity(e.target.value)}
-             className="bg-transparent border-none text-white focus:outline-none text-2xl" type="text" placeholder="Search City"/>
+             className="bg-transparent border-none text-white focus:outline-none text-2xl sm:text-2xl" type="text" placeholder="Search City"/>
           </div>
-          <button type="submit"><BsSearch size={20}/></button>
+          <button type="submit" className='mt-3 sm:mt-0'><BsSearch size={20}/></button>
         </form>
       </div>
-        {error && <p className='text-center text-red-500 mt-4'>{error}</p>}
+        {error && <p className='text-center text-red-500 mt-4 sm:text-xl'>{error}</p>}
          {(weather as any) .main && <Weather data={weather}/> }
     </div>
   );
