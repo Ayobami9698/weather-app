@@ -61,7 +61,7 @@ if (loading) {
             onChange={(e)=> setCity(e.target.value)}
              className="bg-transparent border-none text-white focus:outline-none text-2xl sm:text-2xl" type="text" placeholder="Search City"/>
           </div>
-          <button type="submit" className='mt-3 sm:mt-0'><BsSearch size={20}/></button>
+          <button type="submit" className='mt-3 sm:mt-0 sm:size-16'><BsSearch size={20}/></button>
         </form>
       </div>
         {error && <p className='text-center text-red-500 mt-4 sm:text-xl'>{error}</p>}
