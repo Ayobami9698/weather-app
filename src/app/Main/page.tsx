@@ -49,8 +49,9 @@ if (loading) {
       src='/images/weather2.jpg'
       alt="/"
       fill
-      className="object-cover"
+      className="object-cover sm:object-cover"
       priority
+      
       />
 
       <div className="relative flex justify-between items-center max-w-[500px] w-full m-auto pt-4 text-white z-10 sm:px-6 mt-8">
