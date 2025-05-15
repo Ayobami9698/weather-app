@@ -22,7 +22,7 @@ const fetchWeather = async (e: React.FormEvent) => {
       setLoading(true);
       setError('');
     
-    const url =`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY!}`
+    const url =`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY!}`
     const response = await axios.get(url)
     
     setWeather(response.data);
@@ -49,7 +49,7 @@ if (loading) {
       src='/images/weather2.jpg'
       alt="/"
       fill
-      className="object-cover sm:object-cover"
+      className="object-cover sm:object-cover sm:w-full sm:h-full"
       priority
       
       />

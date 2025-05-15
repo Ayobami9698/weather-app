@@ -24,7 +24,7 @@ const Weather = ({data}) => {
       </div>
       <div className='flex gap-4 justify-between text-center sm:flex-row sm:justify-between'>
         <div>
-        <p className='font-bold text-2xl sm:text-3xl'>{data.main.feels_like.toFixed(0)}&#176;</p>
+        <p className='font-bold text-2xl sm:text-3xl'>{data.main.feels_like.toFixed(0)}&#176;C</p>
         <p className='text-xl sm:text-2xl'>Feels like</p>
       </div>
       <div>
