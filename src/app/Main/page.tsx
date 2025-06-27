@@ -43,23 +43,24 @@ if (loading) {
 
   
   return (
-    <div>
-      <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/40 z-[1]"/>
-      <Image
+    <div className="bg-[url('/images/weather2.jpg')] bg-cover bg-center h-screen w-full " 
+    >
+       <div className="absolute top-0 left-0 right-0 bottom-0 z-[1]">
+        {/* <Image
       src='/images/weather2.jpg'
       alt="/"
       fill
       className="object-cover sm:object-cover sm:w-full sm:h-full"
-      priority
+      priority 
       
-      />
+      />  */}
 
       <div className="relative flex justify-between items-center max-w-[500px] w-full m-auto pt-4 text-white z-10 sm:px-6 mt-8">
         <form onSubmit={fetchWeather} className="flex justify-between items-center w-full m-auto p-3 bg-transparent border border-gray-300 text-white rounded-2xl  sm:flex-row sm:items-center sm:ml-3 sm:mr-3">
           <div>
             <input
             onChange={(e)=> setCity(e.target.value)}
-             className="bg-transparent border-none text-white focus:outline-none text-2xl sm:text-2xl sm:my-3" type="text" placeholder="Search City"/>
+             className="bg-transparent border-none text-white focus:outline-none text-2xl sm:text-2xl sm:my-3 md:px-2 sm:px-2 mb-12" type="text" placeholder="Search City"/>
           </div>
           <button type="submit" className='mt-3 sm:mt-0 sm:size-16'><BsSearch size={20}/></button>
         </form>
@@ -67,8 +68,10 @@ if (loading) {
         {error && <p className='text-center text-red-500 mt-4 sm:text-xl'>{error}</p>}
          {(weather as any) .main && <Weather data={weather}/> }
     </div>
+    </div>
   );
 }
 }
+
 
 export default Main
