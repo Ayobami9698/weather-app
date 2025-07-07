@@ -28,7 +28,7 @@ const handleCityInput = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const response = await axios.get('https://wft-geo-db.p.rapidapi.com/v1/geo/cities', {
       params: { namePrefix: input, limit: 5 },
       headers: {
-        'X-RapidAPI-Key': process.env.e07be31ccdmsh5dce05d4de6038cp196d30jsn94010541013e!,
+        'X-RapidAPI-Key': process.env.NEXT_PUBLIC_RAPIDAPI_KEY,
         'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
       }
     });
