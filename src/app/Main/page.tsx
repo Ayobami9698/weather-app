@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from "next/image";
 import axios from "axios";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { BsSearch } from "react-icons/bs";
 import Weather from '../components/Weather';
 import Ripple from '../components/Ripple';
@@ -14,6 +14,11 @@ const [weather, setWeather] = useState({});
 const [loading, setLoading] = useState(false);
 const [error, setError] = useState('');
 const [suggestions, setSuggestions] = useState([])
+
+useEffect(() => {
+    console.log("RAPID API KEY:", process.env.NEXT_PUBLIC_RAPIDAPI_KEY);
+    console.log("WEATHER API KEY:", process.env.NEXT_PUBLIC_WEATHER_KEY);
+  }, []);
 
 const handleCityInput = async (e: React.ChangeEvent<HTMLInputElement>) => {
   const input = e.target.value;
@@ -98,7 +103,6 @@ if (loading) {
             onChange={handleCityInput}
             value={city}
              className="bg-transparent border-none text-white focus:outline-none text-2xl sm:text-2xl sm:my-3 md:px-2 sm:px-2 mb-12" type="text" placeholder="Search City"/>
-             {suggestions}
           </div>
 
           {suggestions.length > 0 && (
