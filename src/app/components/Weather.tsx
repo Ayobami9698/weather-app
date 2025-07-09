@@ -18,8 +18,8 @@ const Weather = ({data}) => {
         </div>
         <p className='text-6xl sm:text-8xl lg:text-9xl'>{data.main.temp.toFixed(0)}&#176;C</p>
       </div>
-      <div className='bg-black/50 relative rounded-md w-full sm:mb-12  '>
-        <div className='text-2xl text-center sm:text-3xl px-6 py-6 pl-'>
+      <div className='bg-black/50 relative rounded-md w-full mb-23 '>
+        <div className='text-2xl text-center sm:text-3xl px-6 py-6'>
         <p>Weather in {data.name}</p>
       </div>
       <div className='flex gap-4 justify-between text-center sm:flex-row sm:justify-between px-6 py-6'>
